@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <meta charset="UTF-8">
+  <head>
+    <title>统一建模理论测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0-dist/css/bootstrap.css"/>
+    <script src="../lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/head.js"></script>
+    <script type="text/javascript" src="../js/fill_blank.js"></script>
+    <script type="text/javascript" src="../js/score.js"></script>
+    <script type="text/javascript" src="../js/choose.js"></script>
+    <script type="text/javascript" src="../js/chooses.js"></script>
+    <script type="text/javascript" src="../js/gudge.js"></script>
+    <script type="text/javascript" src="../js/q_a.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+        <form role="form">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="text-center h1">统一建模理论测试</div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row h4">
+                <div class="col-md-4">考试科目：统一建模语言UML</div>
+                <div class="col-md-4">时   间：100分钟</div>
+                <div class="col-md-4">得   分：<span id="score"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row h4">
+
+                  <div class="col-md-4">
+                    <div  id="error_Class">
+                      班   级(必填)：<input type="text" class="form-control" name="stu_Class" id="stu_Class">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div id="error_Id">
+                      学   号(必填)：<input type="text" class="form-control" name="stu_Id" id="stu_Id">
+                    </div>
+                  </div>
+                <div class="col-md-4">
+                  <div id="error_Name">
+                  姓   名(必填)：<input type="text" class="form-control" name="stu_Name" id="stu_Name">
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          <div class="panel panel-default ">
+              <div class="panel-heading">
+                <h3>
+                  一、  填空题
+                </h3>
+              </div>
+              <div  class="panel-body">
+                <ol>
+                  <li>UML  的中文全称是：
+                      <div><input type="text" name="fill_1"></div>
+                  </li><br>
+                  <li>对象最突出的特征是：
+                            <div>
+                              <input type="text" name="fill_2">
+                              <input type="text"  name="fill_2">
+                              <input type="text" name="fill_2">
+                            </div>
+                  </li>
+                </ol>
+              </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3>
+                二、  选择题
+              </h3>
+            </div>
+            <div  class="panel-body">
+              <ol>
+                <li>UML 与软件工程的关系是：
+                    <div><input type="radio" name="choose_1" id="choose_1" value="A">（A）UML 就是软件工程</input><br>
+                    <input type="radio" name="choose_1" id="choose_1" value="B">（B）UML 参与到软件工程中软件开发过程的几个阶段</input><br>
+                    <input type="radio" name="choose_1" id="choose_1" value="C">（C）UML 与软件工程无关</input><br>
+                    <input type="radio" name="choose_1" id="choose_1" value="D">（D）UML 是软件工程的一部分</input><br>
+                    </div>
+                </li>
+                <li>Java 语言支持：
+                          <div><input type="radio" name="choose_2" id="choose_2" value="A">（A）单继承</input><br>
+                          <input type="radio" name="choose_2" id="choose_2" value="B">（B）多继承</input><br>
+                          <input type="radio" name="choose_2" id="choose_2" value="C">（C）单继承和多继承都支持</input><br>
+                          <input type="radio" name="choose_2" id="choose_2" value="D">（D）单继承和多继承都不支持</input><br>
+                          </div>
+              </li>
+              </ol>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3>
+                三、	 多选题
+              </h3>
+            </div>
+            <div class="panel-body">
+              <ol>
+                <li>
+                  用例的粒度分为以下哪三种。<br>
+                  <input type="checkbox" name="chooses_1" value="A">（A）概述级</input><br>
+                  <input type="checkbox" name="chooses_1" value="B">（B）需求级</input><br>
+                  <input type="checkbox" name="chooses_1" value="C">（C）用户目标级</input><br>
+                  <input type="checkbox" name="chooses_1" value="D">（D）子功能集</input><br>
+                </li>
+                <li>
+                类图由以下哪三部分组成。<br>
+                <input type="checkbox" name="chooses_2" value="A">（A）名称(Name)</input><br>
+                <input type="checkbox" name="chooses_2" value="B">（B）属性(Attribute)</input><br>
+                <input type="checkbox" name="chooses_2" value="C">（C）操作(Operation)</input><br>
+                <input type="checkbox" name="chooses_2" value="D">（D）方法（Function）</input><br>
+                </li>
+
+              </ol>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3>
+                四、	 判断题
+              </h3>
+            </div>
+            <div class="panel-body">
+              <ol>
+                <li>
+                  用例图只是用于和客户交流和沟通的，用于确定需求。<input type="radio" name="gudge_1" value="Y">
+                  <span class="glyphicon glyphicon-ok text-success"></span>
+
+                  <input type="radio" name="gudge_1" value="N">
+                  <span class="glyphicon glyphicon-remove text-danger"></span>
+                </li>
+                <li>
+                  在状态图中，终止状态在一个状态图中允许有任意多个。
+                  <input type="radio" name="gudge_2" value="Y">
+                  <span class="glyphicon glyphicon-ok text-success"></span>
+                  <input type="radio" name="gudge_2" value="N">
+                  <span class="glyphicon glyphicon-remove text-danger"></span>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3>
+                五、	 简答题（每题 4 分，共 20 分）
+              </h3>
+            </div>
+            <div class="panel-body">
+              <ol>
+                <li>简述什么是模型以及模型的表现形式?<br></li>
+                <textarea rows="10" cols="100" id="q_a"></textarea><br>
+              </ol>
+            </div>
+          </div>
+          <div class="text-center">
+              <input type="button" value="提交" class="btn btn-primary text-center" onclick="checkInfo();getScore()">
+          </div>
+    </form>
+  </div>
+  </body>
+</html>
