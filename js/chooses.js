@@ -1,14 +1,18 @@
-var score=0;
-function check_chooses(){
-  var chooses_1=document.forms[0].chooses_1;
-  var chooses_2=document.forms[0].chooses_2;
-
-  if(chooses_1[0].checked&&chooses_1[1].checked&&chooses_1[3].checked){
-    score+=10;
-  }
-  if(chooses_2[0].checked&&chooses_2[1].checked&&chooses_2[2].checked){
-    score+=10;
-  }
-  return score;
-//  alert(chooses_1[0].checked&&chooses_1[1].checked&&chooses_1[2].checked);
+function Check_chooses(name,answer,scoreUnit){
+    Topic.call(this,name,answer,scoreUnit);
+}
+Check_chooses.prototype=Object.create(Topic.prototype);
+Check_chooses.prototype.constructor=Check_chooses;
+Check_chooses.prototype.calculate=function(){
+    var chooses=document.getElementsByName(this.name);
+    var myanswer='';
+    for(var i=0;i<chooses.length;i++){
+        if(chooses[i].checked){
+            myanswer+=chooses[i].value;
+        }
+    }
+    if(myanswer===this.answer){
+        return this.scoreUnit;
+    }
+    return 0;
 }

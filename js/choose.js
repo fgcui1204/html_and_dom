@@ -1,13 +1,18 @@
-var score=0;
-function check_choose(){
-  var choose_1=document.getElementsByName("choose_1");
-  var choose_2=document.getElementsByName("choose_2");
-
-  if(choose_1[1].checked){
-    score+=10;
-  }
-  if(choose_2[0].checked){
-    score+=10;
-  }
-  return score;
+function Check_choose(name,answer,scoreUnit){
+    Topic.call(this,name,answer,scoreUnit);
+}
+Check_choose.prototype=Object.create(Topic.prototype);
+Check_choose.prototype.constructor=Check_choose;
+Check_choose.prototype.calculate=function(){
+    var choose=document.getElementsByName(this.name);
+    var myanswer="";
+    for(var i=0;i<choose.length;i++){
+        if(choose[i].checked){
+            myanswer+=choose[i].value;
+        }
+    }
+    if(myanswer===this.answer){
+        return this.scoreUnit;
+    }
+    return 0;
 }

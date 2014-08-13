@@ -1,20 +1,16 @@
-var score=0;
-function check_fill_blank(){
-
-  var fill_1=document.getElementsByName("fill_1");
-  var fill_2=document.getElementsByName("fill_2");
-  if("统一建模语言"===fill_1[0].value){
-    score+=10;
-  }
-  if("封装性"===fill_2[0].value){
-    score+=10;
-  }
-  if("多态性"===fill_2[1].value){
-    score+=10;
-  }
-  if("继承性"===fill_2[2].value){
-    score+=10;
-  }
-  return score;
-  //alert(fill_1_1[0].value);
+function Fill_blank(name, answer, scoreUnit) {
+    Topic.call(this, name, answer, scoreUnit);
+}
+Fill_blank.prototype = Object.create(Topic.prototype);
+Fill_blank.prototype.constructor = Fill_blank;
+Fill_blank.prototype.calculate = function () {
+    var fill_answers = document.getElementsByName(this.name);
+    var myanswer='';
+    for(var i=0;i<fill_answers.length;i++){
+        myanswer=fill_answers[i].value;
+    }
+    if (myanswer === this.answer) {
+        return this.scoreUnit;
+    }
+    return 0;
 }

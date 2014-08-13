@@ -1,9 +1,12 @@
-var score=0;
-function check_q_a(){
-  var content=document.getElementById("q_a");
-  var text="模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以是某种图形；或者是一种数学表达式。";
-  if(content==text){
-    score+=10;
-  }
-  return score;
+function Q_a(name, answer, scoreUnit) {
+    Topic.call(this, name, answer, scoreUnit);
+}
+Q_a.prototype = Object.create(Topic.prototype);
+Q_a.prototype.constructor = Q_a;
+Q_a.prototype.calculate = function () {
+    var myanswer = document.getElementsByName(this.name);
+    if (myanswer === this.answer) {
+        return this.scoreUnit;
+    }
+    return 0;
 }

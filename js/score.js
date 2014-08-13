@@ -1,9 +1,9 @@
-function getScore(){
-  //alert(check_fill_blank());
-  // alert(check_choose());
-  // alert(check_chooses());
+ function getScore() {
+        var answers = Answers();
+        var score = 0;
+        for(var i=0;i<answers.length;i++){
+            score+=answers[i].calculate();
+        }
+        return score;
+ }
 
-  var score = check_fill_blank()+check_choose()+check_chooses()+check_gudge();
-  // alert(score);
-  document.getElementById("score").innerHTML=score;
-}
